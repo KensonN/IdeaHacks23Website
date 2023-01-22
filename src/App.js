@@ -2,7 +2,7 @@ import './App.css';
 import React from 'react'
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import Profile from "./routes/profile"
-import Login from "./routes/login"
+import Login from "./routes/Login"
 import Zoo from "./routes/zoo"
 import Social from "./routes/social"
 import Home from "./routes/home"
@@ -70,7 +70,7 @@ class App extends React.Component {
             <Route path="zoo" element={<Zoo />} />
             <Route path="social" element={<Social />} />
             <Route path="profile" element={<Profile />} />
-            <Route path="login" element={<Login />} />
+            <Route path="Login" element={<Login />} />
           </Routes>
         </ThemeProvider>
     </div>
