@@ -24,7 +24,7 @@ const theme = createTheme({
   palette: {
     primary: {
       // light: will be calculated from palette.primary.main,
-      main: '#D9D9D9',
+      main: '#CDC3BC',
       // dark: will be calculated from palette.primary.main,
       contrastText: '#ffffff'
     },
@@ -35,8 +35,8 @@ const theme = createTheme({
       contrastText: '#ffcc00',
     },
     text: {
-      primary: '#D9D9D9',
-      secondary: '#D9D9D9',
+      primary: '#CDC3BC',
+      secondary: '#D9D9D9D5CBC3',
       // disabled: styles.ttt,
       // hint: styles.tttt,
     },

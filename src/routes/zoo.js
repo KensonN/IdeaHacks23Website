@@ -4,6 +4,18 @@ import Navbar from "../navbar"
 import { Grid, Box, Typography, AppBar, Toolbar, Paper, Button, Stack } from '@mui/material'
 import {withStyles} from '@mui/styles'
 import water from '../water.png'
+import a1 from './a1.png'
+import a2 from './a2.png'
+import a3 from './a3.png'
+import a4 from './a4.png'
+import a5 from './a5.png'
+import a6 from './a6.png'
+import b1 from './b1.png'
+import b2 from './b2.png'
+import b3 from './b3.png'
+import b4 from './b4.png'
+import b5 from './b5.png'
+import b6 from './b6.png'
 
 var bottle=50
 
@@ -11,6 +23,9 @@ const styles = {
     dailyIntake: {
         fontSize: "3rem",
         fontWeight: 900
+    },
+    background: {
+        backgroundColor: "rgb(235,235,231)",
     },
 	root: {
 	//   minHeight: "98vh",
@@ -31,7 +46,25 @@ const styles = {
         maxHeight: "100%",
         maxWidth: "100%",
         objectFit: "fill"
+    },
+    intake: {
+        paddingLeft: "30px",
+        display: 'flex',
+        lineHeight: 3,
+        position: 'relative',
+    },
+    animalback: {
+        main: '#D9D9D9',
+    },
+    animalimg:{
+        paddingBottom: "15px",
+        maxHeight: "100%",
+        maxWidth: "100%",
+
     }
+
+
+
 
 }
 
@@ -54,8 +87,98 @@ class Zoo extends React.Component {
 					<Button color="inherit" variant="outlined">Logout</Button>
 				</Toolbar>
 			</AppBar>
+            
+            <div>
+        {/* <img src={water} alt="" style={{maxHeight: "100%", maxWidth: "100%"}}/> */}
+        <br />
+        <br />
+       
+      </div>
+
+
+                    <Grid container spacing={0} className={classes.root}>
+                        <Grid item xs={3} className={classes.intake}>
+                            <Paper>
+                                <Typography sx = {{fontSize: "3rem", fontWeight: 700}} className={classes.dailyIntake}>
+                                    YOUR DAILY
+                                </Typography>
+                                {/* <Typography sx = {{fontSize: "3rem", fontWeight: 700}} className={classes.dailyIntake}>
+                                    DAILY
+                                </Typography> */}
+                                <Typography sx = {{fontSize: "3rem", fontWeight: 700, marginTop: "-15px"}} className={classes.dailyIntake}>
+                                    INTAKE:
+                                </Typography>
+                                <Typography sx = {{fontSize: "5rem", fontWeight: 700, color: "#E065C6", marginTop: "-25px" }} className={classes.dailyIntake}>
+                                    2.5L
+                                </Typography>
+                            </Paper>
+                        </Grid>
+                        <Grid item xs = {3}>
+                            <Box style={{height: "15rem"}}>
+                                <img src={water} style={{maxHeight: "100%", maxWidth: "100%"}}/>
+                            </Box>
+                        </Grid>
+                    
+                        <Grid item xs = {2}>
+                            <Paper>
+                            <Typography sx = {{fontSize: "2.2rem", fontWeight: 700, marginTop: "20px", paddingLeft:"0px" }} className={classes.dailyIntake}>
+                                    BOTTLES YOU'VE SAVED TODAY:
+                                </Typography>
+                            </Paper>
+                         </Grid>
+                         <Grid item xs = {2}>
+                            <Typography sx = {{fontSize: "7rem", fontWeight: 700, color: "#E065C6", marginLeft: "-60px", marginTop: "40px"}} className={classes.dailyIntake} >
+                                    30
+                                </Typography>
+                         </Grid>
+                         <Grid item xs = {2}>
+                            <Paper>
+                            <Typography sx = {{fontSize: "3rem", fontWeight: 700, marginTop: "15px",  paddingRight: "20px" }} className={classes.dailyIntake}>
+                                   STREAK:
+                                </Typography>
+                            </Paper>
+                            <Typography sx = {{fontSize: "3rem", fontWeight: 700, color: "#E065C6", paddingRight: "20px"}} className={classes.dailyIntake} >
+                                    5
+                            </Typography>
+                            <Typography sx = {{fontSize: "2rem", fontWeight: 700, color: "#000000",  paddingRight: "20px"}} className={classes.dailyIntake} >
+                                    days
+                            </Typography>
+                         
+                         </Grid>
+                         
+                    </Grid>
+
             <Grid container spacing={0} className={classes.root}>
-                <Grid item direction="row" alignItems="center" xs={8}>
+                    <Grid item xs = {12}>
+                        <Paper>
+                    <Typography sx = {{fontSize: "7rem", fontWeight: 700, marginTop: "15px", marginBottom: "15px"}} className={classes.dailyIntake} >
+                            YOUR ANIMALS
+                        </Typography>
+                        </Paper>
+                    </Grid>
+
+
+                   <Grid container spacing={0} style={{backgroundColor: "#CDC3BC", paddingTop: "40px"}}>
+                        <Grid item xs = {2}> <img src={a1} className={classes.animalimg}/> </Grid>
+                        <Grid item xs = {2}> <img src={a2} className={classes.animalimg}/> </Grid>
+                        <Grid item xs = {2}> <img src={a3} className={classes.animalimg}/> </Grid>
+                        <Grid item xs = {2}> <img src={a4} className={classes.animalimg}/> </Grid>
+                        <Grid item xs = {2}> <img src={a5} className={classes.animalimg}/> </Grid>
+                        <Grid item xs = {2}> <img src={a6} className={classes.animalimg}/> </Grid>
+                        
+                        <Grid item xs = {2}> <img src={b1} className={classes.animalimg}/> </Grid>
+                        <Grid item xs = {2}> <img src={b2} className={classes.animalimg}/> </Grid>
+                        <Grid item xs = {2}> <img src={b3} className={classes.animalimg}/> </Grid>
+                        <Grid item xs = {2}> <img src={b4} className={classes.animalimg}/> </Grid>
+                        <Grid item xs = {2}> <img src={b5} className={classes.animalimg}/> </Grid>
+                        <Grid item xs = {2}> <img src={b6} className={classes.animalimg}/> </Grid>
+                 </Grid>
+            </Grid>
+
+
+            {/* <Grid container spacing={0} className={classes.root}> */}
+            {/* <div className={classes.background}> */}
+                {/* <Grid item direction="row" alignItems="center" xs={8}>
                     <Grid container direction="row">
                         <Grid item xs={4}>
                             <Paper>
@@ -86,64 +209,7 @@ class Zoo extends React.Component {
                         </Grid>
                         <Grid item xs={1}></Grid>
                     </Grid>
-                    {/* <Grid container direction="row" justifyContent="center" alignItems="center" spacing={8}>
-                        <Grid item>
-                            <Typography>
-                                Sun
-                            </Typography>
-                            <Typography>
-                                1
-                            </Typography>
-                        </Grid>
-                        <Grid item>
-                            <Typography>
-                                Mon
-                            </Typography>
-                            <Typography>
-                                1
-                            </Typography>
-                        </Grid>
-                        <Grid item>
-                            <Typography>
-                                Tues
-                            </Typography>
-                            <Typography>
-                                1
-                            </Typography>
-                        </Grid>
-                        <Grid item>
-                            <Typography>
-                                Wed
-                            </Typography>
-                            <Typography>
-                                1
-                            </Typography>
-                        </Grid>
-                        <Grid item>
-                            <Typography>
-                                Thurs
-                            </Typography>
-                            <Typography>
-                                1
-                            </Typography>
-                        </Grid>
-                        <Grid item>
-                            <Typography>
-                                Fri
-                            </Typography>
-                            <Typography>
-                                1
-                            </Typography>
-                        </Grid>
-                        <Grid item>
-                            <Typography>
-                                Sat
-                            </Typography>
-                            <Typography>
-                                1
-                            </Typography>
-                        </Grid>
-                    </Grid>  */}
+                 
                     <Grid item xs={12}>
                         <Typography>
                             YOUR ANIMALS
@@ -207,16 +273,17 @@ class Zoo extends React.Component {
                             </Grid>
                         </Grid>
                     </Grid>                           
-                </Grid>
-                <Grid container direction = "row" xs={4}>
-                    <Grid item xs={12}>
-                        <Paper>
+                </Grid> */}
+                {/* </div> */}
+                {/* <Grid container direction = "row" xs={4}> */}
+                    {/* <Grid item xs={12}> */}
+                        {/* <Paper>
                             <Typography sx = {{fontSize: "1.5rem", fontWeight: 700, textAlign: "left", display: "inline-block"}}>
                                 Number of bottles you've saved today: 
                                 <span style={{color: "#E065C6"}}> {bottle} </span>
                             </Typography>
-                        </Paper>
-                        <Box alignItems="center" sx={{textAlign: "center", display: "flex", justifyContent: 'center'}}>
+                        </Paper> */}
+                        {/* <Box alignItems="center" sx={{textAlign: "center", display: "flex", justifyContent: 'center'}}>
                             <Paper component={Stack} direction="column" justifyContent="center" sx={{ height: "12rem", width: "12rem", borderRadius: '50%', backgroundColor: "#E0EEF4" }}>
                                 <Typography sx={{fontSize: "4rem", fontWeight: 900, color: "#E065C6"}}>
                                     2
@@ -225,17 +292,17 @@ class Zoo extends React.Component {
                                     DAY STREAK
                                 </Typography>
                             </Paper>
-                        </Box>
+                        </Box> */}
                     {/* </Grid>
                     <Grid item xs={6}> */}
-                        <Paper>
+                        {/* <Paper>
                             <Typography sx = {{textAlign: "center", fontSize: "2.5rem", fontWeight: 900}} className={classes.dailyIntake}>
                                 YOU REACHED YOUR DAILY WATER INTAKE GOAL <span style={{color: "#E065C6"}}> TWO </span> DAYS IN A ROW!! 
                             </Typography>
-                        </Paper>
-                    </Grid>
-                </Grid>
-            </Grid>
+                        </Paper> */}
+                    {/* </Grid> */}
+                {/* </Grid> */}
+            {/* </Grid> */}
         </Box>
         )
     }
