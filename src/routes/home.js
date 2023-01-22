@@ -1,14 +1,7 @@
 import '../App.css';
 import React from 'react'
-import Navbar from '../navbar';
-import { Routes, Route} from "react-router-dom";
 import { Link } from "react-router-dom"
-import Profile from "./profile"
-import Login from "./login"
-import Zoo from "./zoo"
-import Social from "./social"
-import { Button, Paper, AppBar, Box, Typography, Toolbar} from '@mui/material'
-import { ClassNames } from '@emotion/react';
+import { Button, AppBar, Box, Typography, Toolbar} from '@mui/material'
 import {withStyles} from '@mui/styles'
 
 const styles = theme => ({
@@ -29,9 +22,6 @@ const styles = theme => ({
 })
 
 class Home extends React.PureComponent {
-	constructor(props) {
-		super(props);
-	}
 	render() {
 	const {classes} = this.props;
 	return (
