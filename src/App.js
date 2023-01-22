@@ -6,6 +6,13 @@ import Login from "./routes/Login"
 import Zoo from "./routes/zoo"
 import Social from "./routes/social"
 import Home from "./routes/home"
+import {auth} from "./utils/firebase.js"
+
+import { db } from "./utils/firebase";
+import { useEffect, useState } from "react";
+import { onValue, onChildAdded,ref } from "firebase/database"
+
+import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
@@ -24,7 +31,7 @@ const theme = createTheme({
   palette: {
     primary: {
       // light: will be calculated from palette.primary.main,
-      main: '#CDC3BC',
+      main: '#D9D9D9',
       // dark: will be calculated from palette.primary.main,
       contrastText: '#ffffff'
     },
@@ -35,8 +42,8 @@ const theme = createTheme({
       contrastText: '#ffcc00',
     },
     text: {
-      primary: '#CDC3BC',
-      secondary: '#D9D9D9D5CBC3',
+      primary: '#D9D9D9',
+      secondary: '#D9D9D9',
       // disabled: styles.ttt,
       // hint: styles.tttt,
     },
@@ -60,14 +67,50 @@ const theme = createTheme({
   },
 });
 
-class App extends React.Component {
-  render() {
+
+function App() {
+    var [animals, setAnimals] = useState([]);
+    var [drinkData, setDrinkData] = useState([]);
+  // retrieve data whenever there is a change
+  var tempAnimals;
+  var tempDrinkData;
+    useEffect(() => {
+      var uid = "";
+      onAuthStateChanged(auth, (user) => {
+        if (user) {
+          // User is signed in, see docs for a list of available properties
+          // https://firebase.google.com/docs/reference/js/firebase.User
+          uid = user.uid;
+          // ...
+        } else {
+          // User is signed out
+          // ...
+        }
+      });
+      const path = "users/" + "M9PuUWtHvVe00QCMfKcPWDcWgkD2"
+      const query = ref(db,path);
+      return onValue(query, (snapshot) => {
+        const data = snapshot.val();
+        var tempAnimals = []
+        var tempDrinkData = []
+        if(snapshot.exists()) {
+          Object.values(data["animals"]).map((entry) => {
+            tempAnimals = [...tempAnimals, entry]
+          })
+          Object.values(data["drinkData"]).map((entry) => {
+            tempDrinkData = [...tempDrinkData, entry]
+          })
+          setAnimals(tempAnimals)
+          setDrinkData(tempDrinkData)
+        }
+      })
+    }, [])
     return (
       <div className="App">
         <ThemeProvider theme={theme}>
           <Routes>
             {/* <Route path="/" element={<Home />} /> */}
-            <Route path="zoo" element={<Zoo />} />
+            <Route path="zoo" element={<Zoo animals = {animals} drinkData={drinkData}/>} />
             <Route path="social" element={<Social />} />
             <Route path="profile" element={<Profile />} />
             <Route path="/" element={<Login />} />
@@ -75,7 +118,6 @@ class App extends React.Component {
         </ThemeProvider>
     </div>
     )
-  }
 }
 
 export default App;
