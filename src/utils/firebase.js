@@ -2,6 +2,7 @@
 import { initializeApp } from "firebase/app";
 import { getDatabase } from "firebase/database";
 import {getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword} from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 import {
   collection,
   addDoc,
@@ -30,15 +31,19 @@ export const auth = getAuth(app);
 
 export const db = getDatabase(app);
 
+
+
 //login with email + password
-export const logInWithEmailAndPassword = async (email, password) => {
-  try {
-    await signInWithEmailAndPassword(auth, email, password);
-  } catch (err) {
+export const logInWithEmailAndPassword = (email, password) => {
+    signInWithEmailAndPassword(auth, email, password)
+    .then((response) => {
+      sessionStorage.setItem('Auth Token', response._tokenResponse.refreshToken)
+    })
+  .catch((err) => {
     console.error(err);
     alert(err.message);
-  }
-};
+  })
+}
 
 //create new account
 export const registerWithEmailAndPassword = async ( email, password) => {

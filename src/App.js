@@ -66,11 +66,11 @@ class App extends React.Component {
       <div className="App">
         <ThemeProvider theme={theme}>
           <Routes>
-            <Route path="/" element={<Home />} />
+            {/* <Route path="/" element={<Home />} /> */}
             <Route path="zoo" element={<Zoo />} />
             <Route path="social" element={<Social />} />
             <Route path="profile" element={<Profile />} />
-            <Route path="Login" element={<Login />} />
+            <Route path="/" element={<Login />} />
           </Routes>
         </ThemeProvider>
     </div>
