@@ -141,7 +141,7 @@ class Zoo extends React.Component {
                                     INTAKE:
                                 </Typography>
                                 <Typography sx = {{fontSize: "5rem", fontWeight: 700, color: "#E065C6", marginTop: "-25px" }} className={classes.dailyIntake}>
-                                    {volume} L
+                                    2.5 L
                                 </Typography>
                             </Paper>
                         </Grid>
@@ -160,7 +160,7 @@ class Zoo extends React.Component {
                          </Grid>
                          <Grid item xs = {2}>
                             <Typography sx = {{fontSize: "7rem", fontWeight: 700, color: "#E065C6", marginLeft: "-60px", marginTop: "40px"}} className={classes.dailyIntake} >
-                                    {Math.round(volume/0.708*100)/100}
+                                    {/* {Math.round(volume/0.708*100)/100} */} 5
                                 </Typography>
                          </Grid>
                          <Grid item xs = {2}>
