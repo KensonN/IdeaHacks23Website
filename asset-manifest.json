@@ -1,16 +1,16 @@
 {
-  "main.css": "/IdeaHacks23Website/static/css/main.ed160a61.chunk.css",
-  "main.js": "/IdeaHacks23Website/static/js/main.32256aab.chunk.js",
-  "main.js.map": "/IdeaHacks23Website/static/js/main.32256aab.chunk.js.map",
-  "static/js/1.3c11774c.chunk.js": "/IdeaHacks23Website/static/js/1.3c11774c.chunk.js",
-  "static/js/1.3c11774c.chunk.js.map": "/IdeaHacks23Website/static/js/1.3c11774c.chunk.js.map",
-  "static/js/2.6422faee.chunk.js": "/IdeaHacks23Website/static/js/2.6422faee.chunk.js",
-  "static/js/2.6422faee.chunk.js.map": "/IdeaHacks23Website/static/js/2.6422faee.chunk.js.map",
-  "runtime~main.js": "/IdeaHacks23Website/static/js/runtime~main.79a98eb0.js",
-  "runtime~main.js.map": "/IdeaHacks23Website/static/js/runtime~main.79a98eb0.js.map",
-  "static/media/logo.svg": "/IdeaHacks23Website/static/media/logo.06e73328.svg",
-  "static/css/main.ed160a61.chunk.css.map": "/IdeaHacks23Website/static/css/main.ed160a61.chunk.css.map",
-  "index.html": "/IdeaHacks23Website/index.html",
-  "precache-manifest.673a3129516a2ba2925e6787308ae7b8.js": "/IdeaHacks23Website/precache-manifest.673a3129516a2ba2925e6787308ae7b8.js",
-  "service-worker.js": "/IdeaHacks23Website/service-worker.js"
+  "files": {
+    "main.css": "/IdeaHacks23Website/static/css/main.073c9b0a.css",
+    "main.js": "/IdeaHacks23Website/static/js/main.2eeae884.js",
+    "static/js/787.97a3216f.chunk.js": "/IdeaHacks23Website/static/js/787.97a3216f.chunk.js",
+    "static/media/logo.svg": "/IdeaHacks23Website/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/IdeaHacks23Website/index.html",
+    "main.073c9b0a.css.map": "/IdeaHacks23Website/static/css/main.073c9b0a.css.map",
+    "main.2eeae884.js.map": "/IdeaHacks23Website/static/js/main.2eeae884.js.map",
+    "787.97a3216f.chunk.js.map": "/IdeaHacks23Website/static/js/787.97a3216f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.2eeae884.js"
+  ]
 }
