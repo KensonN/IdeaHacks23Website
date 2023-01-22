@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/IdeaHacks23Website/static/css/main.073c9b0a.css",
-    "main.js": "/IdeaHacks23Website/static/js/main.2eeae884.js",
+    "main.js": "/IdeaHacks23Website/static/js/main.85426b3a.js",
     "static/js/787.97a3216f.chunk.js": "/IdeaHacks23Website/static/js/787.97a3216f.chunk.js",
-    "static/media/logo.svg": "/IdeaHacks23Website/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/water.png": "/IdeaHacks23Website/static/media/water.e1e6e8e623f01202dd92.png",
     "index.html": "/IdeaHacks23Website/index.html",
     "main.073c9b0a.css.map": "/IdeaHacks23Website/static/css/main.073c9b0a.css.map",
-    "main.2eeae884.js.map": "/IdeaHacks23Website/static/js/main.2eeae884.js.map",
+    "main.85426b3a.js.map": "/IdeaHacks23Website/static/js/main.85426b3a.js.map",
     "787.97a3216f.chunk.js.map": "/IdeaHacks23Website/static/js/787.97a3216f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.2eeae884.js"
+    "static/js/main.85426b3a.js"
   ]
 }
